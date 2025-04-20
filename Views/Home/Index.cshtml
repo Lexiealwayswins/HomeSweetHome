@@ -1,0 +1,127 @@
+﻿@model IEnumerable<object>
+@section Styles {
+    <link rel="stylesheet" href="/css/index.css">
+}
+
+<div class="row">
+    <div class="d-flex justify-content-between align-items-center flex-wrap my-4">
+        <div class="role-btn-group me-auto">
+            <button class="role-btn properties @(ViewBag.ViewMode == "properties" ? "active" : "")" 
+                    onclick="window.location.href='/Home/Index?viewMode=properties'">Properties</button>
+            <button class="role-btn demands @(ViewBag.ViewMode == "demands" ? "active" : "")" 
+                    onclick="window.location.href='/Home/Index?viewMode=demands'">Demands</button>
+        </div>
+        <form id="searchForm" class="search-form me-3" action="/Home/Index" method="get">
+            <input type="hidden" name="viewMode" value="@(ViewBag.ViewMode ?? "properties")" />
+            <select name="location" class="form-select">
+                <option value="">Select City</option>
+                <option value="Vancouver">Vancouver</option>
+                <option value="Victoria">Victoria</option>
+                <option value="Surrey">Surrey</option>
+                <option value="Burnaby">Burnaby</option>
+                <option value="Richmond">Richmond</option>
+                <option value="Kelowna">Kelowna</option>
+            </select>
+            <input type="number" name="maxPrice" placeholder="Max Price" class="form-control" min="0" step="10">
+            <input type="number" name="bedrooms" placeholder="Bedrooms" class="form-control" min="0">
+            <input type="number" name="bathrooms" placeholder="Bathrooms" class="form-control" min="0">
+            <i class="bi bi-search" onclick="document.getElementById('searchForm').submit()"></i>
+        </form>
+    </div>
+    <h2>@(ViewBag.ViewMode == "demands" ? "Demand Posts" : "Available Properties")</h2>
+</div>
+<div class="row pt-5 g-4">
+    @foreach (var item in Model)
+    {
+        var property = item as HomeSweetHome.Models.Property;
+        var demand = item as HomeSweetHome.Models.Demand;
+        if (property != null)
+        {
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+                <div class="card cursor-pointer h-100" onclick="window.location.href='/Home/PropertyDetail/@property.PropertyId'">
+                    <div class="position-relative">
+                        <img src="@(property.Images.FirstOrDefault() ?? "/images/placeholder.jpg")" class="card-img-top" alt="@property.Title" style="max-height: 150px; object-fit: cover;">
+                        <span class="favorite-heart position-absolute top-0 end-0 m-2" 
+                              data-id="@property.PropertyId" 
+                              data-type="property" 
+                              onclick="event.stopPropagation(); toggleFavorite(this);">
+                            @if (ViewBag.Favorites?.Contains(property.PropertyId) == true)
+                            {
+                                <i class="bi bi-heart-fill favorited"></i>
+                            }
+                            else
+                            {
+                                <i class="bi bi-heart"></i>
+                            }
+                        </span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">@property.Title</h5>
+                        <p class="card-text">@property.Location</p>
+                        <p class="card-text fw-bold">$@property.Price/month</p>
+                        <p class="card-text">Posted on: @property.CreatedAt.ToString("yyyy-MM-dd HH:mm")</p>
+                    </div>
+                </div>
+            </div>
+        }
+        else if (demand != null)
+        {
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+                <div class="card cursor-pointer h-100" onclick="window.location.href='/Home/DemandDetail/@demand.DemandId'">
+                    <div class="position-relative">
+                        <div class="d-flex justify-content-center" style="max-height: 150px; overflow: hidden;">
+                            <img src="@(demand.User.Avatar ?? "/images/default-avatar.png")" class="rounded-circle" alt="@demand.User.Username's Avatar" style="width: 100px; height: 100px; object-fit: cover; object-position: center;">
+                        </div>
+                        <span class="favorite-heart position-absolute top-0 end-0 m-2" 
+                              data-id="@demand.DemandId" 
+                              data-type="demand" 
+                              onclick="event.stopPropagation(); toggleFavorite(this);">
+                            @if (ViewBag.Favorites?.Contains(demand.DemandId) == true)
+                            {
+                                <i class="bi bi-heart-fill favorited"></i>
+                            }
+                            else
+                            {
+                                <i class="bi bi-heart"></i>
+                            }
+                        </span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">@demand.Title</h5>
+                        <p class="card-text">@demand.Location</p>
+                        <p class="card-text fw-bold">Budget: $@demand.MaxBudget</p>
+                        <p class="card-text">@demand.MinBedrooms Bedrooms, @demand.MinBathrooms Bathrooms</p>
+                        <p class="card-text">Posted on: @demand.CreatedAt.ToString("yyyy-MM-dd HH:mm")</p>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+</div>
+
+@section Scripts {
+    <script>
+        function toggleFavorite(element) {
+            const id = $(element).data('id');
+            const type = $(element).data('type');
+            const isFavorited = $(element).hasClass('favorited');
+
+            $.ajax({
+                url: '/Home/ToggleFavorite',
+                method: 'POST',
+                data: { id: id, type: type, add: !isFavorited },
+                success: function () {
+                    if (isFavorited) {
+                        $(element).removeClass('favorited').html('<i class="bi bi-heart"></i>');
+                    } else {
+                        $(element).addClass('favorited').html('<i class="bi bi-heart-fill"></i>');
+                    }
+                },
+                error: function () {
+                    alert('Please login to favorite items.');
+                    window.location.href = '/Account/Login';
+                }
+            });
+        }
+    </script>
+}

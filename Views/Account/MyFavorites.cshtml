@@ -1,0 +1,87 @@
+@model IEnumerable<HomeSweetHome.Models.Favorite>
+@section Styles {
+    <link rel="stylesheet" href="/css/index.css">
+}
+
+<div class="row mb-3">
+    <h2>My Favorites</h2>
+</div>
+<div class="row pt-5 g-4">
+    @foreach (var favorite in Model)
+    {
+        if (favorite.Property != null)
+        {
+            var property = favorite.Property;
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+                <div class="card cursor-pointer h-100" onclick="window.location.href='/Home/PropertyDetail/@property.PropertyId'">
+                    <div class="position-relative">
+                        <img src="@(property.Images.FirstOrDefault() ?? "/images/placeholder.jpg")" class="card-img-top" alt="@property.Title" style="max-height: 150px; object-fit: cover;">
+                        <span class="favorite-heart position-absolute top-0 end-0 m-2" 
+                              data-id="@property.PropertyId" 
+                              data-type="property" 
+                              onclick="event.stopPropagation(); toggleFavorite(this);">
+                            <i class="bi bi-heart-fill favorited"></i>
+                        </span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">@property.Title</h5>
+                        <p class="card-text">@property.Location</p>
+                        <p class="card-text fw-bold">$@property.Price/month</p>
+                    </div>
+                </div>
+            </div>
+        }
+        else if (favorite.Demand != null)
+        {
+            var demand = favorite.Demand;
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+                <div class="card cursor-pointer h-100" onclick="window.location.href='/Home/DemandDetail/@demand.DemandId'">
+                    <div class="position-relative">
+                        <div class="d-flex justify-content-center" style="max-height: 150px; overflow: hidden;">
+                            <img src="@(demand.User.Avatar ?? "/images/default-avatar.png")" class="rounded-circle" alt="@demand.User.Username's Avatar" style="width: 120px; height: 120px; object-fit: cover; object-position: center;">
+                        </div>
+                        <span class="favorite-heart position-absolute top-0 end-0 m-2" 
+                              data-id="@demand.DemandId" 
+                              data-type="demand" 
+                              onclick="event.stopPropagation(); toggleFavorite(this);">
+                            <i class="bi bi-heart-fill favorited"></i>
+                        </span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">@demand.Title</h5>
+                        <p class="card-text">@demand.Location</p>
+                        <p class="card-text fw-bold">Budget: $@demand.MaxBudget</p>
+                        <p class="card-text">@demand.MinBedrooms Bedrooms, @demand.MinBathrooms Bathrooms</p>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+</div>
+
+@section Scripts {
+    <script>
+        function toggleFavorite(element) {
+            const id = $(element).data('id');
+            const type = $(element).data('type');
+            const isFavorited = $(element).hasClass('favorited');
+
+            $.ajax({
+                url: '/Home/ToggleFavorite',
+                method: 'POST',
+                data: { id: id, type: type, add: !isFavorited },
+                success: function () {
+                    if (isFavorited) {
+                        $(element).removeClass('favorited').html('<i class="bi bi-heart"></i>');
+                    } else {
+                        $(element).addClass('favorited').html('<i class="bi bi-heart-fill"></i>');
+                    }
+                },
+                error: function () {
+                    alert('Please login to favorite items.');
+                    window.location.href = '/Account/Login';
+                }
+            });
+        }
+    </script>
+}

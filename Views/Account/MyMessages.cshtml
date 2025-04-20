@@ -1,0 +1,83 @@
+@model dynamic
+
+@{
+    ViewData["Title"] = "My Messages";
+}
+
+<style>
+    .list-group-item a {
+        color: #333; 
+        text-decoration: none; 
+    }
+
+   
+    .list-group-item:hover {
+        background-color: #f5f5f5; 
+    }
+
+    
+    .list-group-item {
+        padding: 10px 15px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        margin-bottom: -1px; 
+    }
+</style>
+
+<div class="container">
+    <h2>My Messages</h2>
+    <div class="row">
+        <div class="col-md-4">
+            @if (ViewBag.HasConversations)
+            {
+                <ul class="list-group">
+                    @foreach (var conversation in ViewBag.Conversations)
+                    {
+                        <li class="list-group-item">
+                            <a href="@Url.Action("MyMessages", new { receiverId = conversation.ContactId, postId = conversation.PostId, postType = conversation.PostType })">
+                                @conversation.Contact.Username - @conversation.PostTitle
+                            </a>
+                        </li>
+                    }
+                </ul>
+            }
+            else
+            {
+                <p>No conversations found.</p>
+            }
+        </div>
+
+        <div class="col-md-8">
+            @if (ViewBag.SelectedContact != null)
+            {
+                <h3>Chat with @ViewBag.SelectedContact.Username</h3>
+                <p>Regarding: @ViewBag.SelectedPost?.Title</p>
+
+                <div class="chat-box" style="border: 1px solid #ccc; padding: 10px; height: 300px; overflow-y: scroll;">
+                    @foreach (var message in ViewBag.Messages)
+                    {
+                        <div class="@(message.SenderId == ViewBag.UserId ? "text-right" : "text-left")">
+                            <p><strong>@message.Sender.Username:</strong> @message.MessageText</p>
+                            <small>@message.SentDate</small>
+                        </div>
+                    }
+                </div>
+
+                <form asp-action="SendMessage" method="post" style="margin-top: 20px;">
+                    <input type="hidden" name="receiverId" value="@ViewBag.SelectedContact.UserId" />
+                    <input type="hidden" name="postId" value="@ViewBag.PostId" />
+                    <input type="hidden" name="postType" value="@ViewBag.PostType" />
+                    <div class="form-group">
+                        <label for="content">Message:</label>
+                        <textarea name="content" class="form-control" rows="3" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary my-5" style="background-color: #ff6b6b; border-color: #ff6b6b; color: white;">Send</button>
+                </form>
+            }
+            else
+            {
+                <p>Select a conversation to start chatting.</p>
+            }
+        </div>
+    </div>
+</div>

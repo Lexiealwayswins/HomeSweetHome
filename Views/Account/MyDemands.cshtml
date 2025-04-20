@@ -1,0 +1,46 @@
+@model IEnumerable<HomeSweetHome.Models.Demand>
+
+<div class="row mb-3">
+    <h2>My Demands</h2>
+    <div class="col-auto ms-auto">
+        <a href="/Account/DemandPosts" class="btn btn-primary" style="background-color: var(--secondary-color); border-color: var(--secondary-color);">
+            <i class="bi bi-plus-lg"></i> Add New Demand
+        </a>
+    </div>
+</div>
+<div class="row pt-5 g-4">
+    @if (!Model.Any())
+    {
+        <p>No demands found. Click "Add New Demand" to create one.</p>
+    }
+    else
+    {
+        @foreach (var demand in Model)
+        {
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+                <div class="card h-100" style="display: flex; flex-direction: column;">
+                    <div class="cursor-pointer" onclick="window.location.href='/Home/DemandDetail/@demand.DemandId'" style="flex: 1 0 auto;">
+                        <div class="position-relative">
+                            <div class="d-flex justify-content-center" style="max-height: 150px; overflow: hidden;">
+                                <img src="@(demand.User.Avatar ?? "/images/default-avatar.png")" class="rounded-circle" alt="@demand.User.Username's Avatar" style="width: 120px; height: 120px; object-fit: cover; object-position: center;">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">@demand.Title</h5>
+                            <p class="card-text">@demand.Location</p>
+                            <p class="card-text fw-bold">Budget: $@demand.MaxBudget</p>
+                            <p class="card-text">@demand.MinBedrooms Bedrooms, @demand.MinBathrooms Bathrooms</p>
+                        </div>
+                    </div>
+                    <div class="card-footer d-flex justify-content-between mt-auto">
+                        <a href="/Account/DemandPosts/@demand.DemandId" class="btn btn-sm btn-primary" style="background-color: var(--text-emphasis-color); border-color: var(--text-emphasis-color);">Edit</a>
+                        <form asp-action="DeleteDemand" asp-controller="Account" method="post" onsubmit="return confirm('Are you sure you want to delete this demand?');">
+                            <input type="hidden" name="id" value="@demand.DemandId" />
+                            <button type="submit" class="btn btn-sm btn-secondary">Delete</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+</div>

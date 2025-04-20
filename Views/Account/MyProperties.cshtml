@@ -1,0 +1,36 @@
+@model IEnumerable<HomeSweetHome.Models.Property>
+
+<div class="row mb-3">
+    <h2>My Properties</h2>
+    <div class="col-auto ms-auto">
+        <a href="/Account/PropertyPosts" class="btn btn-primary" style="background-color: var(--secondary-color); border-color: var(--secondary-color);">
+            <i class="bi bi-plus-lg"></i> Add New Property
+        </a>
+    </div>
+</div>
+<div class="row pt-5 g-4">
+    @foreach (var property in Model)
+    {
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+            <div class="card h-100">
+                <div class="cursor-pointer" onclick="window.location.href='/Home/PropertyDetail/@property.PropertyId'">
+                    <div class="position-relative">
+                        <img src="@(property.Images.FirstOrDefault() ?? "/images/placeholder.jpg")" class="card-img-top" alt="@property.Title" style="max-height: 150px; object-fit: cover;">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">@property.Title</h5>
+                        <p class="card-text">@property.Location</p>
+                        <p class="card-text fw-bold">$@property.Price/month</p>
+                    </div>
+                </div>
+                <div class="card-footer d-flex justify-content-between">
+                    <a href="/Account/PropertyPosts/@property.PropertyId" class="btn btn-sm btn-primary" style="background-color: #ff6b6b; border-color: #ff6b6b;">Edit</a>
+                    <form asp-action="DeleteProperty" asp-controller="Account" method="post" onsubmit="return confirm('Are you sure you want to delete this property?');">
+                        <input type="hidden" name="id" value="@property.PropertyId" />
+                        <button type="submit" class="btn btn-sm btn-secondary">Delete</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    }
+</div>

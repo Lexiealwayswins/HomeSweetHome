@@ -1,0 +1,66 @@
+@model HomeSweetHome.Models.Property
+@using System.Linq
+
+<div class="container my-4">
+    <!-- 标题 -->
+    <div class="row justify-content-center">
+        <div class="col-12 col-lg-10">
+            <h2 class="mb-3">@Model.Title</h2>
+        </div>
+    </div>
+
+    <!-- 图片轮播图 -->
+    <div class="row justify-content-center">
+        <div class="col-12 col-lg-10">
+            <div id="propertyCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    @if (Model.Images != null && Model.Images.Any())
+                    {
+                        @for (int i = 0; i < Model.Images.Count; i++)
+                        {
+                            <div class="carousel-item @(i == 0 ? "active" : "")">
+                                <img src="@Model.Images[i]" class="d-block w-100" alt="Property Image" style="max-height: 500px; object-fit: cover; border-radius: 10px;">
+                            </div>
+                        }
+                    }
+                    else
+                    {
+                        <div class="carousel-item active">
+                            <img src="/images/placeholder.jpg" class="d-block w-100" alt="Placeholder" style="max-height: 500px; object-fit: cover; border-radius: 10px;">
+                        </div>
+                    }
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#propertyCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#propertyCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 房源信息 -->
+    <div class="row justify-content-center">
+        <div class="col-12 col-lg-10">
+            <div class="row">
+                <div class="col-md-6">
+                    <p><strong>Posted by:</strong> @Model.User?.Username</p>
+                    <p><strong>Posted on:</strong> @Model.CreatedAt.ToString("yyyy-MM-dd HH:mm")</p>
+                    <p><strong>Location:</strong> @Model.Location</p>
+                    <p><strong>Price:</strong> $@Model.Price/month</p>
+                    <p><strong>Bedrooms:</strong> @Model.Bedrooms</p>
+                    <p><strong>Bathrooms:</strong> @Model.Bathrooms</p>
+                    <p>@Model.Description</p>
+
+                    @if (!ViewBag.IsOwner)
+                    {
+                        <a href="@Url.Action("MyMessages", "Account", new { receiverId = Model.UserId, postId = Model.PropertyId, postType = "Property" })" class="btn btn-primary mb-3" style="background-color: #ff6b6b; border-color: #ff6b6b;">Contact User</a>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

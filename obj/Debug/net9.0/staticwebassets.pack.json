@@ -1,0 +1,389 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/Uploads/properties/b6d51fc2-1350-4913-9053-82d298821969.jpg",
+      "PackagePath": "staticwebassets/Uploads/properties/b6d51fc2-1350-4913-9053-82d298821969.jpg"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/css/index.css",
+      "PackagePath": "staticwebassets/css/index.css"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/css/styles.css",
+      "PackagePath": "staticwebassets/css/styles.css"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/favicon.ico",
+      "PackagePath": "staticwebassets/favicon.ico"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/images/avatars/alice_wong.jpg",
+      "PackagePath": "staticwebassets/images/avatars/alice_wong.jpg"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/images/avatars/bob_lee.jpg",
+      "PackagePath": "staticwebassets/images/avatars/bob_lee.jpg"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/images/avatars/eaf6f8ca-9c22-4bbf-bd9b-71bad91574fe.jpeg",
+      "PackagePath": "staticwebassets/images/avatars/eaf6f8ca-9c22-4bbf-bd9b-71bad91574fe.jpeg"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/images/avatars/f01a0a48-cec9-426d-bb98-5025ed0187da.jpeg",
+      "PackagePath": "staticwebassets/images/avatars/f01a0a48-cec9-426d-bb98-5025ed0187da.jpeg"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/images/avatars/jane_smith.jpg",
+      "PackagePath": "staticwebassets/images/avatars/jane_smith.jpg"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/images/avatars/john_doe.jpg",
+      "PackagePath": "staticwebassets/images/avatars/john_doe.jpg"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/images/default-avatar.png",
+      "PackagePath": "staticwebassets/images/default-avatar.png"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/images/logo.png",
+      "PackagePath": "staticwebassets/images/logo.png"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/images/placeholder.jpg",
+      "PackagePath": "staticwebassets/images/placeholder.jpg"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/images/properties/06859d93-e189-4fd8-b2c6-d799f9d57839.jpg",
+      "PackagePath": "staticwebassets/images/properties/06859d93-e189-4fd8-b2c6-d799f9d57839.jpg"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/images/properties/0ee78b59-2d20-4989-b7d1-a42adbfdc200.jpeg",
+      "PackagePath": "staticwebassets/images/properties/0ee78b59-2d20-4989-b7d1-a42adbfdc200.jpeg"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/images/properties/29444747-0d91-40e6-96bd-99de36c53e08.jpg",
+      "PackagePath": "staticwebassets/images/properties/29444747-0d91-40e6-96bd-99de36c53e08.jpg"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/images/properties/5f3e5d0f-388b-44b9-9e50-10e50ceeab09.jpg",
+      "PackagePath": "staticwebassets/images/properties/5f3e5d0f-388b-44b9-9e50-10e50ceeab09.jpg"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/images/properties/6d8b452c-8911-4a6e-bcd6-bc1ef5a2dd58.jpg",
+      "PackagePath": "staticwebassets/images/properties/6d8b452c-8911-4a6e-bcd6-bc1ef5a2dd58.jpg"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/images/properties/82118059-4506-4ac1-9264-f17aa105d421.jpeg",
+      "PackagePath": "staticwebassets/images/properties/82118059-4506-4ac1-9264-f17aa105d421.jpeg"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/images/properties/829f8862-2ba9-430b-b90e-cc5f7371ccf2.jpeg",
+      "PackagePath": "staticwebassets/images/properties/829f8862-2ba9-430b-b90e-cc5f7371ccf2.jpeg"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/images/properties/9d71c1bb-fa4f-4fd0-b0a8-47d991833ca6.jpg",
+      "PackagePath": "staticwebassets/images/properties/9d71c1bb-fa4f-4fd0-b0a8-47d991833ca6.jpg"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/images/properties/afb6939a-bfad-49c0-bef7-d0f7db8cd4b7.jpg",
+      "PackagePath": "staticwebassets/images/properties/afb6939a-bfad-49c0-bef7-d0f7db8cd4b7.jpg"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/images/properties/cozy_apartment1.jpg",
+      "PackagePath": "staticwebassets/images/properties/cozy_apartment1.jpg"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/images/properties/cozy_apartment2.jpg",
+      "PackagePath": "staticwebassets/images/properties/cozy_apartment2.jpg"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/images/properties/cozy_studio1.jpg",
+      "PackagePath": "staticwebassets/images/properties/cozy_studio1.jpg"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/images/properties/f178b49d-5d86-48ec-8ded-d2720a794a3a.jpg",
+      "PackagePath": "staticwebassets/images/properties/f178b49d-5d86-48ec-8ded-d2720a794a3a.jpg"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/images/properties/family_house1.jpg",
+      "PackagePath": "staticwebassets/images/properties/family_house1.jpg"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/images/properties/modern_loft1.jpg",
+      "PackagePath": "staticwebassets/images/properties/modern_loft1.jpg"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/images/properties/sunny_condo1.jpg",
+      "PackagePath": "staticwebassets/images/properties/sunny_condo1.jpg"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/js/favorite.js",
+      "PackagePath": "staticwebassets/js/favorite.js"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/js/site.js",
+      "PackagePath": "staticwebassets/js/site.js"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/lib/bootstrap/LICENSE",
+      "PackagePath": "staticwebassets/lib/bootstrap"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.css"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.css.map"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.min.css"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.css"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.css"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/lib/bootstrap/dist/css/bootstrap.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.css"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.css.map"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.min.css"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.min.css.map"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.css"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.js"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.js"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.js.map"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.min.js"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/lib/bootstrap/dist/js/bootstrap.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.js"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.js.map"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.min.js"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.min.js.map"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/LICENSE.txt"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/lib/jquery-validation/LICENSE.md",
+      "PackagePath": "staticwebassets/lib/jquery-validation/LICENSE.md"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/lib/jquery-validation/dist/additional-methods.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/additional-methods.js"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/lib/jquery-validation/dist/additional-methods.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/additional-methods.min.js"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/lib/jquery-validation/dist/jquery.validate.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/jquery.validate.js"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/jquery.validate.min.js"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/lib/jquery/LICENSE.txt",
+      "PackagePath": "staticwebassets/lib/jquery/LICENSE.txt"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/lib/jquery/dist/jquery.js",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.js"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/lib/jquery/dist/jquery.min.js",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.js"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/lib/jquery/dist/jquery.min.map",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.map"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/lib/jquery/dist/jquery.slim.js",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.slim.js"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/lib/jquery/dist/jquery.slim.min.js",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.slim.min.js"
+    },
+    {
+      "Id": "/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/wwwroot/lib/jquery/dist/jquery.slim.min.map",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.slim.min.map"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.HomeSweetHome.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.HomeSweetHome.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.build.HomeSweetHome.props",
+      "PackagePath": "build\\HomeSweetHome.props"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.buildMultiTargeting.HomeSweetHome.props",
+      "PackagePath": "buildMultiTargeting\\HomeSweetHome.props"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.buildTransitive.HomeSweetHome.props",
+      "PackagePath": "buildTransitive\\HomeSweetHome.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

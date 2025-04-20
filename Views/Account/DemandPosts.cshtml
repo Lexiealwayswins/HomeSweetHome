@@ -1,0 +1,46 @@
+@model HomeSweetHome.Models.Demand
+
+<h2>@(Model.DemandId == 0 ? "Create Demand" : "Edit Demand")</h2>
+<form asp-action="@(Model.DemandId == 0 ? "CreateDemand" : "EditDemand")" method="post">
+    <input type="hidden" asp-for="DemandId" />
+    <div class="mb-3">
+        <label asp-for="Title" class="form-label"></label>
+        <input asp-for="Title" class="form-control" required />
+        <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Description" class="form-label"></label>
+        <textarea asp-for="Description" class="form-control" rows="5"></textarea>
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Location" class="form-label"></label>
+        <select asp-for="Location" class="form-control" required>
+            <option value="">Select City</option>
+            <option value="Vancouver">Vancouver</option>
+            <option value="Victoria">Victoria</option>
+            <option value="Surrey">Surrey</option>
+            <option value="Burnaby">Burnaby</option>
+            <option value="Richmond">Richmond</option>
+            <option value="Kelowna">Kelowna</option>
+        </select>
+        <span asp-validation-for="Location" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="MaxBudget" class="form-label"></label>
+        <input asp-for="MaxBudget" type="number" step="0.01" class="form-control" required min="0" />
+        <span asp-validation-for="MaxBudget" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="MinBedrooms" class="form-label"></label>
+        <input asp-for="MinBedrooms" type="number" class="form-control" required min="0" />
+        <span asp-validation-for="MinBedrooms" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="MinBathrooms" class="form-label"></label>
+        <input asp-for="MinBathrooms" type="number" class="form-control" required min="0" />
+        <span asp-validation-for="MinBathrooms" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary" style="background-color: var(--text-emphasis-color); border-color: var(--text-emphasis-color);">Save</button>
+    <a href="/Account/MyDemands" class="btn btn-secondary">Cancel</a>
+</form>

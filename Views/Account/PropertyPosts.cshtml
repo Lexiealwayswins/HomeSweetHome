@@ -1,0 +1,177 @@
+@model HomeSweetHome.Models.Property
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <h2 class="text-center mb-4">@(Model.PropertyId == 0 ? "Create Property" : "Edit Property")</h2>
+        @if (TempData["ErrorMessage"] != null)
+        {
+            <div class="alert alert-danger">@TempData["ErrorMessage"]</div>
+        }
+        <form id="propertyForm" asp-action="@(Model.PropertyId == 0 ? "CreateProperty" : "EditProperty")" method="post">
+            <input type="hidden" asp-for="PropertyId" />
+            <div class="mb-3">
+                <label asp-for="Title" class="form-label">Title</label>
+                <input asp-for="Title" class="form-control" required />
+            </div>
+            <div class="mb-3">
+                <label asp-for="Description" class="form-label">Description</label>
+                <textarea asp-for="Description" class="form-control" rows="3" required></textarea>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Location" class="form-label">Location</label>
+                <select asp-for="Location" class="form-select" required>
+                    <option value="">Select City</option>
+                    <option value="Vancouver">Vancouver</option>
+                    <option value="Victoria">Victoria</option>
+                    <option value="Surrey">Surrey</option>
+                    <option value="Burnaby">Burnaby</option>
+                    <option value="Richmond">Richmond</option>
+                    <option value="Kelowna">Kelowna</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Price" class="form-label">Price ($/month)</label>
+                <input asp-for="Price" type="number" class="form-control" required min="0" step="0.01" />
+            </div>
+            <div class="mb-3">
+                <label asp-for="Bedrooms" class="form-label">Bedrooms</label>
+                <input asp-for="Bedrooms" type="number" class="form-control" required min="0" />
+            </div>
+            <div class="mb-3">
+                <label asp-for="Bathrooms" class="form-label">Bathrooms</label>
+                <input asp-for="Bathrooms" type="number" class="form-control" required min="0" />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Images</label>
+                <div id="imagePreview" class="d-flex flex-wrap mb-2">
+                    @if (Model.PropertyId != 0 && Model.Images != null && Model.Images.Any())
+                    {
+                        foreach (var image in Model.Images)
+                        {
+                            <div class="position-relative me-2 mb-2 image-container" data-image-path="@image">
+                                <img src="@image" alt="Property Image" style="max-width: 100px; max-height: 100px; object-fit: cover;" />
+                                <button type="button" class="btn btn-secondary btn-sm position-absolute top-0 end-0" onclick="removeImage(this)">X</button>
+                            </div>
+                        }
+                    }
+                </div>
+                <input type="file" id="imageFiles" class="form-control" accept="image/*" multiple />
+                <button type="button" class="btn btn-secondary mt-2" style="background-color: var(--secondary-color); border-color: var(--secondary-color);" onclick="uploadImages()">Upload Images</button>
+                <small class="form-text text-muted">You can upload multiple images at once, and upload more later.</small>
+            </div>
+            <button type="submit" class="btn btn-primary w-100" style="background-color: var(--text-emphasis-color); border-color: var(--text-emphasis-color);">@(Model.PropertyId == 0 ? "Create" : "Update")</button>
+        </form>
+        @if (Model.PropertyId != 0)
+        {
+            <form asp-action="DeleteProperty" method="post" class="mt-3">
+                <input type="hidden" name="id" value="@Model.PropertyId" />
+                <button type="submit" class="btn btn-secondary w-100" onclick="return confirm('Are you sure you want to delete this property?')">Delete Property</button>
+            </form>
+        }
+        <p class="text-center mt-3">
+            <a href="/Account/MyProperties">Back to My Properties</a>
+        </p>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        let uploadedImages = @if (Model.PropertyId != 0 && Model.Images != null && Model.Images.Any())
+        {
+            @Html.Raw(Json.Serialize(Model.Images))
+        }
+        else
+        {
+            @Html.Raw("[]")
+        };
+
+        function uploadImages() {
+            const files = document.getElementById('imageFiles').files;
+            if (files.length === 0) {
+                alert('Please select at least one image.');
+                return;
+            }
+
+            const formData = new FormData();
+            for (let i = 0; i < files.length; i++) {
+                formData.append('imageFiles', files[i]);
+            }
+
+            $.ajax({
+                url: '/Account/UploadImages',
+                method: 'POST',
+                data: formData,
+                processData: false,
+                contentType: false,
+                success: function (response) {
+                    if (response.success) {
+                        response.imagePaths.forEach(imagePath => {
+                            if (!uploadedImages.includes(imagePath)) {
+                                uploadedImages.push(imagePath);
+                                const container = document.createElement('div');
+                                container.className = 'position-relative me-2 mb-2 image-container';
+                                container.setAttribute('data-image-path', imagePath);
+
+                                const img = document.createElement('img');
+                                img.src = imagePath;
+                                img.alt = 'Property Image';
+                                img.style.maxWidth = '100px';
+                                img.style.maxHeight = '100px';
+                                img.style.objectFit = 'cover';
+
+                                const removeBtn = document.createElement('button');
+                                removeBtn.type = 'button';
+                                removeBtn.className = 'btn btn-danger btn-sm position-absolute top-0 end-0';
+                                removeBtn.innerText = 'X';
+                                removeBtn.onclick = function () { removeImage(this); };
+
+                                container.appendChild(img);
+                                container.appendChild(removeBtn);
+                                document.getElementById('imagePreview').appendChild(container);
+                            }
+                        });
+
+                        document.getElementById('imageFiles').value = '';
+                    } else {
+                        alert('Failed to upload images: ' + response.error);
+                    }
+                },
+                error: function () {
+                    alert('Error uploading images.');
+                }
+            });
+        }
+
+        // 删除图片
+        function removeImage(button) {
+            const container = button.parentElement;
+            const imagePath = container.getAttribute('data-image-path');
+            $.ajax({
+                url: '/Account/RemoveImage',
+                method: 'POST',
+                data: { imagePath: imagePath },
+                success: function (response) {
+                    if (response.success) {
+                        uploadedImages = uploadedImages.filter(path => path !== imagePath);
+                        container.remove();
+                    } else {
+                        alert('Failed to remove image: ' + response.error);
+                    }
+                },
+                error: function () {
+                    alert('Error removing image.');
+                }
+            });
+        }
+
+        document.getElementById('propertyForm').addEventListener('submit', function (e) {
+            uploadedImages.forEach((path, index) => {
+                const input = document.createElement('input');
+                input.type = 'hidden';
+                input.name = `Images[${index}]`;
+                input.value = path;
+                this.appendChild(input);
+            });
+        });
+    </script>
+}

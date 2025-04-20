@@ -1,0 +1,18 @@
+@model HomeSweetHome.Models.Demand
+
+<div class="row">
+    <div class="col-md-8">
+        <h2>@Model.Title</h2>
+        <div class="mb-4">
+            <img src="@(Model.User.Avatar ?? "/images/default-avatar.png")" class="img-fluid rounded-circle" style="width: 150px; height: 150px; object-fit: cover;" alt="@Model.User.Username's Avatar">
+        </div>
+        <p><strong>Posted by:</strong> @Model.User.Username</p>
+        <p><strong>Posted on:</strong> @Model.CreatedAt.ToString("yyyy-MM-dd HH:mm")</p>
+        <p><strong>Location:</strong> @Model.Location</p>
+        <p><strong>Max Budget:</strong> $@Model.MaxBudget</p>
+        <p><strong>Minimum Bedrooms:</strong> @Model.MinBedrooms</p>
+        <p><strong>Minimum Bathrooms:</strong> @Model.MinBathrooms</p>
+        <p>@Model.Description</p>
+        <a href="@Url.Action("MyMessages", "Account", new { receiverId = Model.UserId, postId = Model.DemandId, postType = "Demand" })" class="btn btn-primary mb-3" style="background-color: var(--text-emphasis-color); border-color: var(--text-emphasis-color);">Contact Tenant</a>
+    </div>
+</div>

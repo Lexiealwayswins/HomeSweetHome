@@ -1,0 +1,93 @@
+is_global = true
+build_property.TargetFramework = net9.0
+build_property.TargetFramework = net9.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = HomeSweetHome
+build_property.RootNamespace = HomeSweetHome
+build_property.ProjectDir = /Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 9.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 9.0
+build_property.EnableCodeStyleSeverity = 
+
+[/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/Views/Account/DemandPosts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9EZW1hbmRQb3N0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9Mb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/Views/Account/MyDemands.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9NeURlbWFuZHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/Views/Account/MyFavorites.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9NeUZhdm9yaXRlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/Views/Account/MyMessages.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9NeU1lc3NhZ2VzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/Views/Account/MyProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9NeVByb2ZpbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/Views/Account/MyProperties.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9NeVByb3BlcnRpZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/Views/Account/PropertyPosts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9Qcm9wZXJ0eVBvc3RzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/Views/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9SZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/Views/Home/DemandDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9EZW1hbmREZXRhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/Views/Home/PropertyDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcm9wZXJ0eURldGFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/Views/Shared/_Navbar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19OYXZiYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

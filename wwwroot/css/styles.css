@@ -1,0 +1,20 @@
+:root {
+  --primary-color: #ff93a1; 
+  --secondary-color: #aee2f3; 
+  --bg-color: #FFFFFF;
+  --text-color: #2f2f2f;
+  --text-emphasis-color: #f97284;
+}
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Montserrat', sans-serif;
+}
+.navbar {
+  background-color: var(--primary-color);
+}
+
+.container-fluid, container {
+  padding: 0 50px;
+}
+
