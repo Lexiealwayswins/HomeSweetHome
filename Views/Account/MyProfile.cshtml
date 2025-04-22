@@ -1,15 +1,42 @@
 @model HomeSweetHome.Models.User
 
 <h2>My Profile</h2>
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success">@TempData["SuccessMessage"]</div>
+}
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger">@TempData["ErrorMessage"]</div>
+}
+
 <form asp-action="UpdateProfile" method="post" enctype="multipart/form-data">
+    <input type="hidden" asp-for="UserId" />
     <div class="mb-3">
-        <label asp-for="Username" class="form-label"></label>
+        <label asp-for="Username" class="form-label">Username</label>
         <input asp-for="Username" class="form-control" required />
         <span asp-validation-for="Username" class="text-danger"></span>
     </div>
     <div class="mb-3">
+        <label asp-for="Email" class="form-label">Email</label>
+        <input asp-for="Email" class="form-control" type="email" required />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label for="CurrentPassword" class="form-label">Current Password</label>
+        <input type="password" name="CurrentPassword" class="form-control" required />
+        <small class="form-text text-muted">Enter your current password to verify your identity.</small>
+    </div>
+    <div class="mb-3">
         <label for="Password" class="form-label">New Password (leave blank to keep current)</label>
         <input type="password" name="Password" class="form-control" />
+        <small class="form-text text-muted">Leave blank if you don't want to change your password.</small>
+    </div>
+    <div class="mb-3">
+        <label for="ConfirmPassword" class="form-label">Confirm New Password</label>
+        <input type="password" name="ConfirmPassword" class="form-control" />
+        <small class="form-text text-muted">Re-enter your new password to confirm.</small>
     </div>
     <div class="mb-3">
         <label for="AvatarFile" class="form-label">Avatar</label>
@@ -25,4 +52,26 @@
 @section Scripts {
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.20.0/dist/jquery.validate.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation-unobtrusive@4.0.0/dist/jquery.validate.unobtrusive.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("form").validate({
+                rules: {
+                    Password: {
+                        equalTo: "#ConfirmPassword"
+                    },
+                    ConfirmPassword: {
+                        equalTo: "#Password"
+                    }
+                },
+                messages: {
+                    Password: {
+                        equalTo: "New Password and Confirm Password must match."
+                    },
+                    ConfirmPassword: {
+                        equalTo: "New Password and Confirm Password must match."
+                    }
+                }
+            });
+        });
+    </script>
 }

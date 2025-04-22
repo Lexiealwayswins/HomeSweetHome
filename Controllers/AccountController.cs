@@ -53,7 +53,6 @@ namespace HomeSweetHome.Controllers
         [HttpPost]
         public IActionResult Register(User user, IFormFile? AvatarFile)
         {
-            // 验证模型
             if (!ModelState.IsValid)
             {
                 var errors = ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage).ToList();
@@ -61,14 +60,12 @@ namespace HomeSweetHome.Controllers
                 return View(user);
             }
 
-            // 检查邮箱是否已存在
             if (_context.Users.Any(u => u.Email == user.Email))
             {
                 ViewBag.Error = "Email is already registered.";
                 return View(user);
             }
 
-            // 对密码进行哈希处理
             if (!string.IsNullOrWhiteSpace(user.PasswordHash))
             {
                 user.PasswordHash = BCrypt.Net.BCrypt.HashPassword(user.PasswordHash);
@@ -79,7 +76,6 @@ namespace HomeSweetHome.Controllers
                 return View(user);
             }
 
-            // 处理头像上传
             if (AvatarFile != null && AvatarFile.Length > 0)
             {
                 var uploadsDir = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images/avatars");
@@ -287,7 +283,6 @@ namespace HomeSweetHome.Controllers
             property.UserId = userId;
             property.CreatedAt = DateTime.UtcNow;
 
-            // Images 已在表单中通过隐藏字段传递
             if (property.Images == null || !property.Images.Any())
             {
                 property.Images = new List<string> { "/images/placeholder.jpg" };
@@ -470,7 +465,7 @@ namespace HomeSweetHome.Controllers
         }
 
         [HttpPost]
-        public IActionResult UpdateProfile(User user, IFormFile? avatar)
+        public IActionResult UpdateProfile(User user, IFormFile? AvatarFile, string? CurrentPassword, string? Password, string? ConfirmPassword)
         {
             if (!User.Identity?.IsAuthenticated == true)
             {
@@ -480,13 +475,48 @@ namespace HomeSweetHome.Controllers
             var existingUser = _context.Users.Find(user.UserId);
             if (existingUser == null)
             {
-                return NotFound();
+                TempData["ErrorMessage"] = "User not found.";
+                return RedirectToAction("MyProfile", "Account");
+            }
+
+            if (string.IsNullOrWhiteSpace(CurrentPassword) || !BCrypt.Net.BCrypt.Verify(CurrentPassword, existingUser.PasswordHash))
+            {
+                TempData["ErrorMessage"] = "Current password is incorrect.";
+                return View("MyProfile", existingUser);
+            }
+
+            if (!string.IsNullOrWhiteSpace(Password))
+            {
+                if (Password != ConfirmPassword)
+                {
+                    TempData["ErrorMessage"] = "New password and confirm password do not match.";
+                    return View("MyProfile", existingUser);
+                }
+                existingUser.PasswordHash = BCrypt.Net.BCrypt.HashPassword(Password);
+            }
+
+            if (string.IsNullOrWhiteSpace(user.Username))
+            {
+                TempData["ErrorMessage"] = "Username cannot be empty.";
+                return View("MyProfile", existingUser);
+            }
+
+            if (string.IsNullOrWhiteSpace(user.Email))
+            {
+                TempData["ErrorMessage"] = "Email cannot be empty.";
+                return View("MyProfile", existingUser);
+            }
+
+            if (_context.Users.Any(u => u.Email == user.Email && u.UserId != user.UserId))
+            {
+                TempData["ErrorMessage"] = "This email is already in use by another user.";
+                return View("MyProfile", existingUser);
             }
 
             existingUser.Username = user.Username;
             existingUser.Email = user.Email;
 
-            if (avatar != null)
+            if (AvatarFile != null && AvatarFile.Length > 0)
             {
                 var uploadsDir = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images/avatars");
                 if (!Directory.Exists(uploadsDir))
@@ -494,18 +524,28 @@ namespace HomeSweetHome.Controllers
                     Directory.CreateDirectory(uploadsDir);
                 }
 
-                var fileName = Guid.NewGuid().ToString() + Path.GetExtension(avatar.FileName);
+                var fileName = Guid.NewGuid().ToString() + Path.GetExtension(AvatarFile.FileName);
                 var filePath = Path.Combine(uploadsDir, fileName);
 
                 using (var stream = new FileStream(filePath, FileMode.Create))
                 {
-                    avatar.CopyTo(stream);
+                    AvatarFile.CopyTo(stream);
                 }
 
                 existingUser.Avatar = $"/images/avatars/{fileName}";
             }
 
-            _context.SaveChanges();
+            try
+            {
+                _context.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                TempData["ErrorMessage"] = $"Failed to update profile: {ex.Message}";
+                return View("MyProfile", existingUser);
+            }
+
+            TempData["SuccessMessage"] = "Profile updated successfully.";
             return RedirectToAction("MyProfile", "Account");
         }
 

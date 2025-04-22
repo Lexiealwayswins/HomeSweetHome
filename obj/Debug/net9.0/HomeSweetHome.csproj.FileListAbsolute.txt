@@ -767,3 +767,4 @@
 /Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/obj/Debug/net9.0/compressed/s4kz0cv15n-4yeku478a3.gz
 /Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/obj/Debug/net9.0/compressed/6ylwegyxdt-mmi7cohb6c.gz
 /Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/bin/Debug/net9.0/BCrypt.Net-Next.dll
+/Users/lexie/Library/CloudStorage/OneDrive-Personal/Lexie/Schools/FDU/Courses/25Spring/6844ProgrammingForTheInternet/project/HomeSweetHome/obj/Debug/net9.0/HomeSweetHome.sourcelink.json

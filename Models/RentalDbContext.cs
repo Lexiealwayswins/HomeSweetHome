@@ -38,7 +38,7 @@ namespace HomeSweetHome.Models
                     UserId = 2,
                     Username = "jane_smith",
                     Email = "jane@example.com",
-                    PasswordHash = "$2a$11$yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy", // 替换为实际哈希值
+                    PasswordHash = "$2a$11$yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy",
                     Avatar = "/images/avatars/jane_smith.jpg"
                 },
                 new User
@@ -46,7 +46,7 @@ namespace HomeSweetHome.Models
                     UserId = 3,
                     Username = "alice_wong",
                     Email = "alice@example.com",
-                    PasswordHash = "$2a$11$zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz", // 替换为实际哈希值
+                    PasswordHash = "$2a$11$zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz", 
                     Avatar = "/images/avatars/alice_wong.jpg"
                 },
                 new User
@@ -54,7 +54,7 @@ namespace HomeSweetHome.Models
                     UserId = 4,
                     Username = "bob_lee",
                     Email = "bob@example.com",
-                    PasswordHash = "$2a$11$wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww", // 替换为实际哈希值
+                    PasswordHash = "$2a$11$wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
                     Avatar = "/images/avatars/bob_lee.jpg"
                 }
             );
@@ -138,7 +138,7 @@ namespace HomeSweetHome.Models
                     PostId = 1, 
                     PostType = "Property", 
                     MessageText = "Is this still available?",
-                    SentDate = new DateTime(2025, 3, 14, 0, 0, 0).ToString("yyyy-MM-dd HH:mm:ss") // 转换为字符串
+                    SentDate = new DateTime(2025, 3, 14, 0, 0, 0).ToString("yyyy-MM-dd HH:mm:ss")
                 }
             );
 
@@ -212,62 +212,52 @@ namespace HomeSweetHome.Models
                 }
             );
 
-            // 明确指定 ContactMessage 的主键
             modelBuilder.Entity<ContactMessage>()
                 .HasKey(cm => cm.MessageId);
 
-            // 配置 ContactMessage 和 User (Receiver) 的关系
             modelBuilder.Entity<ContactMessage>()
                 .HasOne(cm => cm.Receiver)
                 .WithMany(u => u.ReceivedMessages)
                 .HasForeignKey(cm => cm.ReceiverId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            // 配置 ContactMessage 和 User (Sender) 的关系
             modelBuilder.Entity<ContactMessage>()
                 .HasOne(cm => cm.Sender)
                 .WithMany(u => u.SentMessages)
                 .HasForeignKey(cm => cm.SenderId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            // 配置 Demand 和 User 的关系
             modelBuilder.Entity<Demand>()
                 .HasOne(d => d.User)
                 .WithMany(u => u.Demands)
                 .HasForeignKey(d => d.UserId)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            // 配置 Favorite 和 User 的关系
             modelBuilder.Entity<Favorite>()
                 .HasOne(f => f.User)
                 .WithMany(u => u.Favorites)
                 .HasForeignKey(f => f.UserId)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            // 配置 Favorite 和 Property 的关系
             modelBuilder.Entity<Favorite>()
                 .HasOne(f => f.Property)
                 .WithMany()
                 .HasForeignKey(f => f.PropertyId)
                 .OnDelete(DeleteBehavior.SetNull);
 
-            // 配置 Favorite 和 Demand 的关系
             modelBuilder.Entity<Favorite>()
                 .HasOne(f => f.Demand)
                 .WithMany()
                 .HasForeignKey(f => f.DemandId)
                 .OnDelete(DeleteBehavior.SetNull);
 
-            // 添加约束：PropertyId 和 DemandId 不能同时为空
             modelBuilder.Entity<Favorite>()
                 .ToTable(t => t.HasCheckConstraint("CK_Favorite_OneTarget", "[PropertyId] IS NOT NULL OR [DemandId] IS NOT NULL"));
 
-            // 配置 Property 的 Images 字段为 JSON
             modelBuilder.Entity<Property>()
                 .Property(p => p.Images)
                 .HasColumnType("json");
 
-            // 配置 Property 和 User 的关系
             modelBuilder.Entity<Property>()
                 .HasOne(p => p.User)
                 .WithMany(u => u.Properties)
